@@ -54,7 +54,7 @@ const Exp = styled.div`
   flex-direction: row;
   gap: 5rem;
   @media (max-width: 64em){
-    width: 95%;
+    width: 90%;
     flex-direction: column;
     gap: 1rem;
     .mockItem{
@@ -70,7 +70,7 @@ const Border = styled.div`
   width: 100%;
   border: 1px solid ${(props) => props.theme.secondaryText};
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   @media (max-width: 64em){
     padding: 0.2rem;
   }

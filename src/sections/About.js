@@ -68,7 +68,6 @@ const Story = styled(motion.div)`
   font-size: ${(props) => props.theme.fontmd};
   font-weight: bold;
   text-align: justify;
-  // margin-bottom: 2rem;
   margin: 2rem;
   
   p{
@@ -96,6 +95,7 @@ const Story = styled(motion.div)`
   }
   @media (max-width: 64em){
     letter-spacing: 0.1rem;
+    margin: 0.5rem;
   }
 `;
 
@@ -167,6 +167,7 @@ const About = () => {
               <Resume onClick={handleDownloadResume}>
                 <p>Download Resume</p>
                 <BiDownArrowAlt className="icon"/>
+                
               </Resume>
 
         </Left>
@@ -213,7 +214,7 @@ const About = () => {
               <Story
                 data-scroll
                 data-scroll-direction="vertical"
-                data-scroll-speed="-1"
+                data-scroll-speed="1"
                 data-scroll-target="#right"
               >
                 <SubTitle>&#123; Certificates &#125;</SubTitle>                
