@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GoArrowUpRight } from "react-icons/go";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -98,7 +98,7 @@ const ProjectItem = (props) => {
             <FiGithub className="icon" />
           </a>
           <a href={props.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-            <GoArrowUpRight className="icon" />
+            <FaArrowUpRightFromSquare className="icon" />
           </a>
         </Link>
       </Section>

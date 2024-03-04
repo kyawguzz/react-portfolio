@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MainVideo from '../assets/backgroundVideo.mp4'
 import { motion } from 'framer-motion'
-import img from "../assets/Images/dithered-image.png";
+import img from "../assets/Images/profile.jpg";
 import Lottie from 'react-lottie';
 import animationData from '../assets/lottie/arrowdown.json';
 
@@ -50,8 +50,8 @@ const ArrowDown = styled.div`
 `
 const Card = styled.div`
   box-sizing: border-box;
-  width: 18vw;
-  height: 35vh;
+  width: 18vw; 
+  height: auto;
   border: 1px solid white;
   backdrop-filter: blur(6px);
   border-radius: 5px;
@@ -64,10 +64,11 @@ const Card = styled.div`
   user-select: none;
   font-weight: bolder;
   color: black;
+  padding: 0.5rem;
 
   @media (max-width: 64em){
     width: 53vw;
-    height: 53vw;
+    height: auto; 
   }
 
   &:hover{
@@ -79,15 +80,11 @@ const Card = styled.div`
   } 
 
   .profile {
-    width: 17vw;
-    height: 33vh;
-    position: absolute;
-    @media (max-width: 64em){
-      width: 50vw;
-      height: 50vw;
-    }
+    width: 100%; /* Make the image take full width of the parent */
+    height: auto; /* Make height auto to maintain aspect ratio */
   }
 `
+
 
 const infoVariants = {
   hidden: {

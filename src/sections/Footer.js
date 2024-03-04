@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GoArrowUpRight } from "react-icons/go";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { DiReact } from "react-icons/di";
 import { CiHeart } from "react-icons/ci";
 
@@ -138,11 +138,11 @@ const Footer = () => {
                 <Right>
                     <Social href="https://www.linkedin.com/in/kyaw-zin-htet-dev/" target="_blank">
                             <p>Linkedin</p>
-                            <GoArrowUpRight className="icon"/>
+                            <FaArrowUpRightFromSquare className="icon" />
                     </Social>
                     <Social href="https://github.com/kyawguzz" target="_blank">
                             <p>Github</p>
-                            <GoArrowUpRight className="icon"/>
+                            <FaArrowUpRightFromSquare className="icon" />
                     </Social>
                     {/* <Social href="mailto:kyawzinhtet7930@gmail.com">
                             <p>Gmail</p>

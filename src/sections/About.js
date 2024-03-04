@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BiDownArrowAlt } from "react-icons/bi";
+import { CiSaveDown2 } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import ResumeContent from '../assets/Kyaw-Zin-Htet-Resume.pdf'
 
@@ -166,7 +166,7 @@ const About = () => {
         <Left >
               <Resume onClick={handleDownloadResume}>
                 <p>Download Resume</p>
-                <BiDownArrowAlt className="icon"/>
+                <CiSaveDown2 className="icon"/>
                 
               </Resume>
 
