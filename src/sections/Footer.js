@@ -106,11 +106,14 @@ const Social = styled.a`
   cursor: pointer;
   transition: all 0.5s;
   .icon{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   &:hover{
     transform: scale(1.01);
     background: rgba(0,0,0,0.5);
+    .icon{
+      font-size: 1.2rem;
+    }
   } 
   @media (max-width: 64em){
     width: 40vw;

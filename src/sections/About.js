@@ -123,11 +123,14 @@ const Resume = styled.div`
   cursor: pointer;
   transition: all 0.5s;
   .icon{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   &:hover{
     transform: scale(1.01);
     background: rgba(0,0,0,0.5);
+    .icon{
+      font-size: 1.2rem;
+    }
   } 
   @media (max-width: 64em) {
     margin-top: 10rem;
@@ -178,7 +181,7 @@ const About = () => {
               <Story
                 data-scroll
                 data-scroll-direction="vertical"
-                data-scroll-speed="2"
+                data-scroll-speed="1"
                 data-scroll-target="#right"
               >
                 <SubTitle>&#123; Story &#125;</SubTitle>
@@ -200,7 +203,7 @@ const About = () => {
               <Story 
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="3"
+                data-scroll-speed="1"
                 data-scroll-target="#right"
               >
                 <SubTitle>&#123; Education &#125;</SubTitle>
@@ -213,8 +216,8 @@ const About = () => {
 
               <Story
                 data-scroll
-                data-scroll-direction="vertical"
-                data-scroll-speed="1"
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-1"
                 data-scroll-target="#right"
               >
                 <SubTitle>&#123; Certificates &#125;</SubTitle>                

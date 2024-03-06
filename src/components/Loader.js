@@ -22,12 +22,6 @@ const Container = styled(motion.div)`
   background-color: black;
   width: 100%;
 
-  @media (max-width: 48em) {
-    svg{
-      width: 20vw;
-    }
-  }
-
   svg {
     width: 4vw;
     height: auto;
@@ -99,7 +93,7 @@ const Loader = () => {
                 className="lottie"
                 options={defaultOptions}
                 width={300}
-                height={200}
+                height={100}
             />
 
         </Container>
