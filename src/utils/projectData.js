@@ -6,7 +6,7 @@ import img5 from '../assets/Images/projects/rhyme4u.png';
 const projectData = [
     {
       id: 1,
-      number: '//001',
+      number: '001 >>',
       img: img1,
       name: 'K-Kanban',
       desc: 'desc',
@@ -16,7 +16,7 @@ const projectData = [
     },
     {
       id: 2,
-      number: '//002',
+      number: '002 >>',
       img: img2,
       name: 'Crypto Track ',
       desc: 'desc',
@@ -26,7 +26,7 @@ const projectData = [
     },
     {
       id: 3,
-      number: '//003',
+      number: '003 >>',
       img: img3,
       name: 'Authenication App',
       desc: 'desc',
@@ -36,7 +36,7 @@ const projectData = [
     },
     {
       id: 4,
-      number: '//004',
+      number: '004 >>',
       img: img4,
       name: 'K-Movies',
       desc: 'desc',
@@ -46,7 +46,7 @@ const projectData = [
     },
     {
       id: 5,
-      number: '//005',
+      number: '005 >>',
       img: img5,
       name: 'rhyme4u',
       desc: 'desc',
@@ -56,7 +56,7 @@ const projectData = [
     },
     {
       id: 6,
-      number: '//006',
+      number: '006 >>',
       img: img1,
       name: 'rhyme4u',
       desc: 'desc',

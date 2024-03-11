@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CiSaveDown2 } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import ResumeContent from '../assets/Kyaw-Zin-Htet-Resume.pdf'
-
+import Chaffle from 'chaffle'
 
 const Content = styled.div`
   min-height: 120vh;
@@ -114,7 +114,7 @@ const Resume = styled.div`
   justify-content: space-between;
   align-items: center;
   border: 1px solid ${(props) => props.theme.text};
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   width: 15vw;
   padding: 0.5rem;
   color: ${(props) => props.theme.text};
@@ -155,6 +155,14 @@ const About = () => {
     document.body.removeChild(link);
   };
 
+  const elements = document.querySelectorAll('[data-chaffle]');
+  Array.prototype.forEach.call(elements, function (el) {
+    const chaffle = new Chaffle(el, { /* options */ });
+    el.addEventListener('mouseover', function () {
+      chaffle.init();
+    });
+  });
+
   return (
     <Content>
         <Title
@@ -168,7 +176,11 @@ const About = () => {
         
         <Left >
               <Resume onClick={handleDownloadResume}>
-                <p>Download Resume</p>
+                <p
+                   data-chaffle="en" 
+                   data-chaffle-speed="10" 
+                   data-chaffle-delay="50"
+                >Download Resume</p>
                 <CiSaveDown2 className="icon"/>
                 
               </Resume>
@@ -202,7 +214,7 @@ const About = () => {
 
               <Story 
                 data-scroll
-                data-scroll-direction="horizontal"
+                data-scroll-direction="vertical"
                 data-scroll-speed="1"
                 data-scroll-target="#right"
               >
@@ -216,8 +228,8 @@ const About = () => {
 
               <Story
                 data-scroll
-                data-scroll-direction="horizontal"
-                data-scroll-speed="-1"
+                data-scroll-direction="vertical"
+                data-scroll-speed="1"
                 data-scroll-target="#right"
               >
                 <SubTitle>&#123; Certificates &#125;</SubTitle>                

@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Chaffle from 'chaffle'
 
 const Section = styled(motion.section)`
   cursor: pointer;
@@ -40,7 +41,7 @@ const Info = styled.div`
   width: 80%;
   display: flex;
   flex-direction: row;
-  gap: 10rem;
+  // gap: 10rem;
   @media (max-width: 64em){
     gap: 1rem;
   }
@@ -55,15 +56,15 @@ const Link = styled.div`
 
 const ImageContainer = styled(motion.div)`
   position: absolute;
-  width: 40vw;
+  width: 30vw;
   height: auto;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
+  z-index: 1;
   @media (max-width: 64em){
-    width: 80vw;
+    width: 50vw;
     height: auto;
   }
 `;
@@ -78,20 +79,41 @@ const Image = styled.img`
 const ProjectItem = (props) => {
   const [showImage, setShowImage] = useState(false);
 
+  const elements = document.querySelectorAll('[data-chaffle]');
+  Array.prototype.forEach.call(elements, function (el) {
+    const chaffle = new Chaffle(el, { /* options */ });
+    el.addEventListener('mouseover', function () {
+      chaffle.init();
+    });
+  });
+
+  
+
   return (
     <>
       <Section
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.95, rotateZ: 1.7 }}
-        onMouseEnter={() => setShowImage(true)}
+        onMouseEnter={() => {
+          setShowImage(true);
+          setShowImage(true);
+        }}
         onMouseLeave={() => setShowImage(false)}
         data-scroll
         data-scroll-direction="vertical"
         data-scroll-speed="1"
       >
-        <Info>
-          <p>{props.number}</p>
-          <p>{props.name}</p>
+        <Info
+            data-chaffle="en" 
+            data-chaffle-speed="10" 
+            data-chaffle-delay="50"
+        >
+          <p>
+              {props.number}
+          </p>
+          <p>
+            {props.name}
+          </p>
         </Info>
         <Link>
           <a href={props.source} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>

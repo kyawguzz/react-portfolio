@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { GoArrowUpRight } from "react-icons/go";
+import Chaffle from 'chaffle'
 
 const Section = styled.section`
   min-height: 120vh;
@@ -135,6 +136,14 @@ const Description = styled.p`
 
 const Experience = () => {
 
+  const elements = document.querySelectorAll('[data-chaffle]');
+  Array.prototype.forEach.call(elements, function (el) {
+    const chaffle = new Chaffle(el, { /* options */ });
+    el.addEventListener('mouseover', function () {
+      chaffle.init();
+    });
+  });
+
   return (
     <Section className="exp">
       <Title
@@ -158,7 +167,13 @@ const Experience = () => {
               <Company>
                 <Info>
                   <Role> &#123; Full-Stack Developer &#125;</Role>
-                  <Employer href="https://www.linkedin.com/company/caringcodecreation/" target="_blank">
+                  <Employer 
+                   href="https://www.linkedin.com/company/caringcodecreation/" 
+                   target="_blank" 
+                   data-chaffle="en" 
+                   data-chaffle-speed="10" 
+                   data-chaffle-delay="50"
+                  >
                     C3 <GoArrowUpRight className="icon" />
                   </Employer>
                 </Info>
@@ -187,7 +202,11 @@ const Experience = () => {
               <Company>
                 <Info>
                   <Role> &#123; Full-Stack Developer &#125;</Role>
-                  <Employer href="https://www.tunyat.com/" target="_blank">
+                  <Employer href="https://www.tunyat.com/" target="_blank"
+                   data-chaffle="en" 
+                   data-chaffle-speed="10" 
+                   data-chaffle-delay="50"
+                  >
                     Tunyat <GoArrowUpRight className="icon" />
                   </Employer>
                 </Info>
@@ -223,7 +242,11 @@ const Experience = () => {
               <Company>
                 <Info>
                   <Role> &#123; Web Developer &#125;</Role>
-                  <Employer>
+                  <Employer
+                    data-chaffle="en" 
+                    data-chaffle-speed="10" 
+                    data-chaffle-delay="50"
+                  >
                     MDITS <GoArrowUpRight className="icon" />
                   </Employer>
                 </Info>
@@ -252,7 +275,9 @@ const Experience = () => {
               <Company>
                 <Info>
                   <Role> &#123; Junior Developer &#125;</Role>
-                  <Employer href="https://www.tunyat.com/" target="_blank">
+                  <Employer href="" target="_blank" data-chaffle="en" 
+                   data-chaffle-speed="10" 
+                   data-chaffle-delay="50">
                     MDITS <GoArrowUpRight className="icon" />
                   </Employer>
                 </Info>
@@ -288,7 +313,9 @@ const Experience = () => {
               <Company>
                 <Info>
                   <Role> &#123; Intern &#125;</Role>
-                  <Employer href="https://www.globalwave.com.mm/" target="_blank">
+                  <Employer href="https://www.globalwave.com.mm/" target="_blank" data-chaffle="en" 
+                   data-chaffle-speed="10" 
+                   data-chaffle-delay="50">
                     Global Wave Technology <GoArrowUpRight className="icon" />
                   </Employer>
                 </Info>

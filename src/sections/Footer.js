@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { DiReact } from "react-icons/di";
 import { CiHeart } from "react-icons/ci";
+import Chaffle from 'chaffle'
 
 const Section = styled.section`
   min-height: 60vh;
@@ -79,7 +79,7 @@ const Text = styled.p`
 const Right = styled.div`
   width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -93,27 +93,27 @@ const Right = styled.div`
 
 const Social = styled.a`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // flex-direction: row;
+  justify-content: center;
   align-items: center;
-  border: 1px solid ${(props) => props.theme.text};
-  border-radius: 0.5rem;
-  width: 15vw;
+  border: 1px solid ${(props) => props.theme.secondaryText};
+  border-radius: 0.2rem;
+  width: 10vw;
   padding: 0.5rem;
   color: ${(props) => props.theme.text};
   height: 4vh;
   font-size: ${(props) => props.theme.fontmd};
   cursor: pointer;
   transition: all 0.5s;
-  .icon{
-    font-size: 1rem;
-  }
+  // .icon{
+  //   font-size: 0.9rem;
+  // }
   &:hover{
-    transform: scale(1.01);
+    // transform: scale(1.01);
     background: rgba(0,0,0,0.5);
-    .icon{
-      font-size: 1.2rem;
-    }
+    // .icon{
+    //   font-size: 1.2rem;
+    // }
   } 
   @media (max-width: 64em){
     width: 40vw;
@@ -122,6 +122,14 @@ const Social = styled.a`
 
 
 const Footer = () => {
+
+  const elements = document.querySelectorAll('[data-chaffle]');
+  Array.prototype.forEach.call(elements, function (el) {
+    const chaffle = new Chaffle(el, { /* options */ });
+    el.addEventListener('mouseover', function () {
+      chaffle.init();
+    });
+  });
 
   return (
       <Section>
@@ -139,17 +147,26 @@ const Footer = () => {
                 </Left>
 
                 <Right>
-                    <Social href="https://www.linkedin.com/in/kyaw-zin-htet-dev/" target="_blank">
-                            <p>Linkedin</p>
-                            <FaArrowUpRightFromSquare className="icon" />
+                    <Social
+                       data-chaffle="en" 
+                       data-chaffle-speed="10" 
+                       data-chaffle-delay="50"
+                       href="https://www.linkedin.com/in/kyaw-zin-htet-dev/"
+                       target="_blank"
+                    >
+                            <p> Linkedin</p>
                     </Social>
-                    <Social href="https://github.com/kyawguzz" target="_blank">
-                            <p>Github</p>
-                            <FaArrowUpRightFromSquare className="icon" />
+                    <Social 
+                       data-chaffle="en" 
+                       data-chaffle-speed="10" 
+                       data-chaffle-delay="50"
+                       href="https://github.com/kyawguzz"
+                       target="_blank"
+                    >
+                            <p> Github </p>
                     </Social>
                     {/* <Social href="mailto:kyawzinhtet7930@gmail.com">
                             <p>Gmail</p>
-                            <GoArrowUpRight className="icon"/>
                     </Social> */}
                 </Right>
 

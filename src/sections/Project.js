@@ -96,7 +96,7 @@ const Project = () => {
 
         <Text data-scroll data-scroll-speed="2">
               &quot; Here are some of the key projects I've worked on, 
-              showcasing my skills in both front-end and back-end development &quot;
+              showcasing my skills in both front-end & back-end development &quot;
         </Text>
     </Section>
   );
