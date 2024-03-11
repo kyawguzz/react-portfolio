@@ -11,7 +11,7 @@ const projectData = [
       name: 'K-Kanban',
       desc: 'desc',
       stack: 'MERN',
-      source: 'https://github.com/kyawguzz/MERN-stack-react-kanban-app',
+      source: 'https://github.com/kyawzin-htet/MERN-stack-react-kanban-app',
       link: 'https://mern-stack-kanban.vercel.app'
     },
     {
@@ -21,7 +21,7 @@ const projectData = [
       name: 'Crypto Track ',
       desc: 'desc',
       stack: 'react',
-      source: 'https://github.com/kyawguzz/crypto-track-app',
+      source: 'https://github.com/kyawzin-htet/crypto-track-app',
       link: 'https://track-app-crypto.netlify.app/'
     },
     {
@@ -31,7 +31,7 @@ const projectData = [
       name: 'Authenication App',
       desc: 'desc',
       stack: 'MERN',
-      source: 'https://github.com/kyawguzz/MERN-Authenication-App',
+      source: 'https://github.com/kyawzin-htet/MERN-Authenication-App',
       link: 'https://mern-authenication.vercel.app/'
     },
     {
@@ -41,7 +41,7 @@ const projectData = [
       name: 'K-Movies',
       desc: 'desc',
       stack: 'react',
-      source: 'https://github.com/kyawguzz/MERN-Movie-Db-App',
+      source: 'https://github.com/kyawzin-htet/MERN-Movie-Db-App',
       link: 'https://moviesk.netlify.app/'
     },
     {
@@ -51,7 +51,7 @@ const projectData = [
       name: 'rhyme4u',
       desc: 'desc',
       stack: 'react',
-      source: 'https://github.com/kyawguzz/react-music-player-app',
+      source: 'https://github.com/kyawzin-htet/react-music-player-app',
       link: 'https://rhyme4u.netlify.app/'
     },
     {
@@ -61,7 +61,7 @@ const projectData = [
       name: 'rhyme4u',
       desc: 'desc',
       stack: 'react',
-      source: 'https://github.com/kyawguzz/react-music-player-app',
+      source: 'https://github.com/kyawzin-htet/react-music-player-app',
       link: 'https://rhyme4u.netlify.app/'
     },
   ]

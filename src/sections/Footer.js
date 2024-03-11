@@ -160,7 +160,7 @@ const Footer = () => {
                        data-chaffle="en" 
                        data-chaffle-speed="10" 
                        data-chaffle-delay="50"
-                       href="https://github.com/kyawguzz"
+                       href="https://github.com/kyawzin-htet"
                        target="_blank"
                     >
                             <p> Github </p>
