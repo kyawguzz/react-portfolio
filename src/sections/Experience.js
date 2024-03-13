@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { GoArrowUpRight } from "react-icons/go";
-import Chaffle from 'chaffle'
 
 const Section = styled.section`
   min-height: 120vh;
@@ -136,13 +135,6 @@ const Description = styled.p`
 
 const Experience = () => {
 
-  const elements = document.querySelectorAll('[data-chaffle]');
-  Array.prototype.forEach.call(elements, function (el) {
-    const chaffle = new Chaffle(el, { /* options */ });
-    el.addEventListener('mouseover', function () {
-      chaffle.init();
-    });
-  });
 
   return (
     <Section className="exp">
@@ -178,7 +170,9 @@ const Experience = () => {
                   </Employer>
                 </Info>
                 <JoinDate>&#40; Jan-2024 / Now &#41;</JoinDate>
-                <Description>
+                <Description
+                  
+                >
                   <ul>
                     <li>Design and development of a full-stack POS web application utilizing the MERN stack (MongoDB, Express, React, Node.js) for efficient inventory management and streamlined checkout processes.</li>
                     <li>Implemented unit tests and rigorous code reviews to guarantee code quality and long-term maintainability.</li>

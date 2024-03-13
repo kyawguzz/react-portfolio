@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { CiSaveDown2 } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import ResumeContent from '../assets/Kyaw-Zin-Htet-Resume.pdf'
-import Chaffle from 'chaffle'
 
 const Content = styled.div`
   min-height: 120vh;
@@ -155,13 +154,6 @@ const About = () => {
     document.body.removeChild(link);
   };
 
-  const elements = document.querySelectorAll('[data-chaffle]');
-  Array.prototype.forEach.call(elements, function (el) {
-    const chaffle = new Chaffle(el, { /* options */ });
-    el.addEventListener('mouseover', function () {
-      chaffle.init();
-    });
-  });
 
   return (
     <Content>

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { DiReact } from "react-icons/di";
 import { CiHeart } from "react-icons/ci";
-import Chaffle from 'chaffle'
 
 const Section = styled.section`
   min-height: 60vh;
@@ -123,14 +122,6 @@ const Social = styled.a`
 
 const Footer = () => {
 
-  const elements = document.querySelectorAll('[data-chaffle]');
-  Array.prototype.forEach.call(elements, function (el) {
-    const chaffle = new Chaffle(el, { /* options */ });
-    el.addEventListener('mouseover', function () {
-      chaffle.init();
-    });
-  });
-
   return (
       <Section>
             <Quote data-scroll data-scroll-speed="5">
@@ -150,7 +141,7 @@ const Footer = () => {
                     <Social
                        data-chaffle="en" 
                        data-chaffle-speed="10" 
-                       data-chaffle-delay="50"
+                       data-chaffle-delay="30"
                        href="https://www.linkedin.com/in/kyaw-zin-htet-dev/"
                        target="_blank"
                     >
@@ -159,7 +150,7 @@ const Footer = () => {
                     <Social 
                        data-chaffle="en" 
                        data-chaffle-speed="10" 
-                       data-chaffle-delay="50"
+                       data-chaffle-delay="30"
                        href="https://github.com/kyawzin-htet"
                        target="_blank"
                     >

@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import styled from 'styled-components';
-import Chaffle from 'chaffle'
 
 const Section = styled(motion.section)`
   cursor: pointer;
@@ -15,14 +14,10 @@ const Section = styled(motion.section)`
   color:  ${(props) => props.theme.secondaryText};
   height: 10vh;
   border-bottom: 1px solid ${(props) => props.theme.secondaryText};
-  border-top: 1px solid ${(props) => props.theme.secondaryText};
   transition: all 0.5s;
   &:hover{
-    transform: scale(1.01);
-    background: rgba(0,0,0,0.5);
     color: ${(props) => props.theme.text};
     border-bottom: 1px solid ${(props) => props.theme.text};
-    border-top: 1px solid ${(props) => props.theme.text};
   } 
   &:active {
     transform: scale(0.95) rotateZ(1.7deg);
@@ -41,7 +36,6 @@ const Info = styled.div`
   width: 80%;
   display: flex;
   flex-direction: row;
-  // gap: 10rem;
   @media (max-width: 64em){
     gap: 1rem;
   }
@@ -58,13 +52,12 @@ const ImageContainer = styled(motion.div)`
   position: absolute;
   width: 30vw;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: -1;
   @media (max-width: 64em){
-    width: 50vw;
+    width: 80vw;
     height: auto;
   }
 `;
@@ -72,41 +65,25 @@ const ImageContainer = styled(motion.div)`
 const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
-  // width: 100%;
-  // height: 100%;
 `;
 
 const ProjectItem = (props) => {
   const [showImage, setShowImage] = useState(false);
 
-  const elements = document.querySelectorAll('[data-chaffle]');
-  Array.prototype.forEach.call(elements, function (el) {
-    const chaffle = new Chaffle(el, { /* options */ });
-    el.addEventListener('mouseover', function () {
-      chaffle.init();
-    });
-  });
-
-  
-
   return (
     <>
       <Section
-        whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.95, rotateZ: 1.7 }}
         onMouseEnter={() => {
           setShowImage(true);
           setShowImage(true);
         }}
         onMouseLeave={() => setShowImage(false)}
-        data-scroll
-        data-scroll-direction="vertical"
-        data-scroll-speed="1"
       >
         <Info
             data-chaffle="en" 
-            data-chaffle-speed="10" 
-            data-chaffle-delay="50"
+            data-chaffle-speed="5" 
+            data-chaffle-delay="20"
         >
           <p>
               {props.number}
@@ -129,7 +106,7 @@ const ProjectItem = (props) => {
           initial={{ scale: 0.9 }}
           animate={{ scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.1 }}
           onMouseEnter={() => setShowImage(true)}
           onMouseLeave={() => setShowImage(false)}
         >
