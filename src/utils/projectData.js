@@ -3,6 +3,9 @@ import img2 from '../assets/Images/projects/crypto.png';
 import img3 from '../assets/Images/projects/authapp.png';
 import img4 from '../assets/Images/projects/kmovies.png';
 import img5 from '../assets/Images/projects/rhyme4u.png';
+import img6 from '../assets/Images/projects/weather.png';
+
+
 const projectData = [
     {
       id: 1,
@@ -57,12 +60,12 @@ const projectData = [
     {
       id: 6,
       number: '006 >>',
-      img: img1,
-      name: 'rhyme4u',
+      img: img6,
+      name: 'WeatherApp',
       desc: 'desc',
       stack: 'react',
-      source: 'https://github.com/kyawzin-htet/react-music-player-app',
-      link: 'https://rhyme4u.netlify.app/'
+      source: 'https://github.com/kyawzin-htet/weatherapp',
+      link: 'https://weatherapp-k-next.vercel.app/'
     },
   ]
 
