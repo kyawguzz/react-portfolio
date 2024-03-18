@@ -12,7 +12,10 @@ const Section = styled.section`
   position: relative;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(180)'%3E%3Crect width='100%25' height='100%25' fill='rgba(32, 32, 32,1)'/%3E%3Cpath d='M-10-1h60v2h-60z' fill='rgba(37, 37, 37,1)'/%3E%3Cpath d='M-10 39h60v2h-60z' fill='rgba(37, 37, 37,1)'/%3E%3Cpath d='M-10 29.5h60v1h-60z' fill='rgba(37, 37, 37,1)'/%3E%3Cpath d='M29.5-10v60h1v-60z' fill='rgba(37, 37, 37,1)'/%3E%3Cpath d='M9-10v60h2v-60z' fill='rgba(37, 37, 37,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
+  @media (max-width: 98em){
+    gap: 5rem;
+   }
   @media (max-width: 64em){
     min-height: 60vh;
     gap: 2rem;
@@ -22,15 +25,20 @@ const Section = styled.section`
 const Quote = styled.p`
     width: 100%;
     color: ${(props) => props.theme.secondaryText};
-    font-size: ${(props) => props.theme.fontxl};
+    font-size: ${(props) => props.theme.fontxxl};
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Kaushan Script";
     opacity: 0.3;
+    text-align: justify;
+    @media (max-width: 98em){
+      font-size: ${(props) => props.theme.fontxl};
+     }
     @media (max-width: 64em){
      width: 90%;
      margin-top: -5rem;
+     font-size: ${(props) => props.theme.fontxl};
     }
 `;
 
@@ -124,7 +132,7 @@ const Footer = () => {
 
   return (
       <Section>
-            <Quote data-scroll data-scroll-speed="5">
+            <Quote data-scroll data-scroll-speed="3">
               &#34;Rather than exceptional gifts, I offer a burning curiosity that fuels my exploration.&#34;
             </Quote>
             <GetInTouch>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import MainVideo from '../assets/backgroundVideo.mp4'
 import { motion } from 'framer-motion'
@@ -48,7 +48,7 @@ const ArrowDown = styled.div`
     margin-bottom: 10vh;
     bottom: 0;
 `
-const Card = styled.div`
+const Card = styled(motion.div)`
   box-sizing: border-box;
   width: 18vw; 
   height: auto;
@@ -65,19 +65,20 @@ const Card = styled.div`
   font-weight: bolder;
   color: black;
   padding: 0.5rem;
+  position: relative;
 
   @media (max-width: 64em){
     width: 53vw;
     height: auto; 
   }
 
-  &:hover{
-    border: 1px solid black;
-    transform: scale(1.05);
-  } 
-  &:active {
-    transform: scale(0.95) rotateZ(1.7deg);
-  } 
+  // &:hover{
+  //   border: 1px solid black;
+  //   transform: scale(1.05);
+  // } 
+  // &:active {
+  //   transform: scale(0.95) rotateZ(1.7deg);
+  // } 
 
   .profile {
     width: 100%; /* Make the image take full width of the parent */
@@ -190,6 +191,8 @@ const Banner = styled(motion.h2)`
 
 const CoverVideo = () => {
 
+  const constraintsRef = useRef(null)
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -205,8 +208,11 @@ const CoverVideo = () => {
 
     <VideoContainer>
       <DarkOverlay />
-      <Info variants={infoVariants} initial="hidden" animate="show" >
-        <Card>
+      <Info variants={infoVariants} initial="hidden" animate="show" ref={constraintsRef} >
+        <Card 
+            drag
+            dragConstraints={constraintsRef}
+        >
           <img
             className="profile"
             src={img}

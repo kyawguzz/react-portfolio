@@ -56,6 +56,7 @@ const Left = styled.pre`;
 
 const Right = styled.div`
   width: 70vw;
+  background: rgb(32, 32, 32, 0.8);
   @media (max-width: 64em) {
     width: 95vw;
   }
